@@ -4,16 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTreeView"
-        mc:Ignorable="d" 
+        mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="1080" Width="1920" WindowStyle="None"
-        AllowsTransparency="True" 
+        Title="MainWindow" Height="900" Width="1400" WindowStyle="None"
+        AllowsTransparency="True"
+        MouseMove="Move_MouseMove"
         >
     <!--WindowState="Maximized"-->
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="266"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
@@ -38,8 +39,9 @@
             <Border Margin=" 30 0 30 0" BorderBrush="DarkGray" BorderThickness="0 0 0 1"/>
 
             <StackPanel Grid.Row="1">
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                <Button Width="250" Height="60" Margin="20 30 20 0"  FontSize="16" HorizontalContentAlignment="Left"
                         materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                        Render = "20 20 20 20"
                         Background="#9C27B3" BorderBrush="#9C27B3">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xe679;" FontSize="26" FontFamily="/#iconfont"/>
@@ -90,19 +92,21 @@
             </StackPanel>
         </Grid>
 
-        <Grid Margin="10,0,0,1022" Grid.ColumnSpan="2">
+        <Grid Height="60" VerticalAlignment="Top"  Grid.ColumnSpan="2">
 
-            <Grid   HorizontalAlignment="Right" Height="60" Width="200.">
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Top"  Height="40" Width="200">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
 
-                    <Button Width="50" Height="50"   FontSize="16" HorizontalContentAlignment="Left" Background="Transparent" BorderBrush="Transparent">
-                        <TextBlock Text="&#xE629;" FontFamily="/#iconfont" FontSize="40" Foreground="Black" RenderTransformOrigin="0.5,0.5" Width="27"/>
+                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,-13">
+                        <TextBlock Text="&#xE629;" FontFamily="/#iconfont" FontSize="20" Foreground="Black" RenderTransformOrigin="0.5,0.5" Width="27"/>
                     </Button>
 
-                    <Button Width="72" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,-13">
-                        <TextBlock Text="&#xE653;" FontFamily="/#iconfont" FontSize="40" Width="54" Foreground="Black" />
+                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,-13">
+                        <TextBlock Text="&#xE653;" FontFamily="/#iconfont" FontSize="15" Width="54" Foreground="Black" />
                     </Button>
-                    <TextBlock Text="&#xE608;" FontFamily="/#iconfont" FontSize="40" Margin="7 0 7 0" />
+                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Click="close_windows" Margin="0,0,0,-13">
+                        <TextBlock Text="&#xE608;" FontFamily="/#iconfont" FontSize="15" Width="54" Foreground="Black" />
+                    </Button>
                 </StackPanel>
             </Grid>
         </Grid>
