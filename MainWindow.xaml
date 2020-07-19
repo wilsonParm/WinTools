@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfTreeView"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="900" Width="1400" WindowStyle="None"
+        Title="MainWindow" Height="1000" Width="1600" WindowStyle="None"
         AllowsTransparency="True"
         MouseMove="Move_MouseMove"
         >
@@ -39,53 +39,58 @@
             <Border Margin=" 30 0 30 0" BorderBrush="DarkGray" BorderThickness="0 0 0 1"/>
 
             <StackPanel Grid.Row="1">
-                <Button Width="250" Height="60" Margin="20 30 20 0"  FontSize="16" HorizontalContentAlignment="Left"
+                <Button Name="winLeft0" Width="250" Height="60" Margin="20 30 20 0"  FontSize="16" HorizontalContentAlignment="Left"
                         materialDesign:ShadowAssist.ShadowDepth="Depth3"
-                        Render = "20 20 20 20"
-                        Background="#9C27B3" BorderBrush="#9C27B3">
+                        Background="#9C27B3" BorderBrush="#9C27B3"
+                        Click="win_0_click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xe679;" FontSize="26" FontFamily="/#iconfont"/>
-                        <TextBlock Text="Surface" Margin="15 0 0 0" VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB0" Text="Surface" Margin="15 0 0 0" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="Transparent" BorderBrush="Transparent">
+                <Button Name="winLeft1" Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                        Background="Transparent" BorderBrush="Transparent"
+                        Click="win_1_click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xe66e;" FontFamily="/#iconfont" FontSize="26" Foreground="#848484"/>
-                        <TextBlock Text="Bing" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB1" Text="Bing" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="Transparent" BorderBrush="Transparent">
+                <Button Name="winLeft2" Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                        Background="Transparent" BorderBrush="Transparent"
+                        Click="win_2_click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xe518;" FontSize="26" FontFamily="/#iconfont" Foreground="#848484"/>
-                        <TextBlock Text="Windows" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB2" Text="Windows" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent">
+                <Button Name="winLeft3" Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                        Background="Transparent" BorderBrush="Transparent"
+                        Click="win_3_click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xe7ee;" FontFamily="/#iconfont" FontSize="26" Foreground="#848484"/>
-                        <TextBlock Text="Xbox" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB3" Text="Xbox" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent">
+                <Button Name="winLeft4" Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                        Background="Transparent" BorderBrush="Transparent"
+                        Click="win_4_click">
                     <StackPanel Orientation="Horizontal" >
                         <TextBlock Text="&#xec66;" FontFamily="/#iconfont" FontSize="26" Foreground="#848484"/>
-                        <TextBlock Text="HoloLens" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB4" Text="HoloLens" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent">
+                <Button Name="winLeft5" Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                        Background="Transparent" BorderBrush="Transparent"
+                        Click="win_5_click">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                         <TextBlock Text="&#xe607;" FontFamily="/#iconfont" Foreground="#848484" FontSize="26"/>
-                        <TextBlock Text="Azure" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Name="winLeftTB5" Text="Azure" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
@@ -94,17 +99,17 @@
 
         <Grid Height="60" VerticalAlignment="Top"  Grid.ColumnSpan="2">
 
-            <Grid HorizontalAlignment="Right" VerticalAlignment="Top"  Height="40" Width="200">
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Top"  Height="40" Width="200" Margin="0 15 0 0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
 
-                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,-13">
+                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Click="mix_windows">
                         <TextBlock Text="&#xE629;" FontFamily="/#iconfont" FontSize="20" Foreground="Black" RenderTransformOrigin="0.5,0.5" Width="27"/>
                     </Button>
 
-                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,-13">
-                        <TextBlock Text="&#xE653;" FontFamily="/#iconfont" FontSize="15" Width="54" Foreground="Black" />
+                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Click="max_windows">
+                        <TextBlock x:Name="btn_max_TB" Text="&#xe60c;" FontFamily="/#iconfont" FontSize="15" Width="54" Foreground="Black" />
                     </Button>
-                    <Button Width="60" Height="Auto"  Background="Transparent" BorderBrush="Transparent" Click="close_windows" Margin="0,0,0,-13">
+                    <Button Width="60" Height="40"  Background="Transparent" BorderBrush="Transparent" Click="close_windows" VerticalAlignment="Top">
                         <TextBlock Text="&#xE608;" FontFamily="/#iconfont" FontSize="15" Width="54" Foreground="Black" />
                     </Button>
                 </StackPanel>
